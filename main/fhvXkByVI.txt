@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+class Student {
+public:
+    Student(const std::string& name, int score) : name(name), score(score) {}
+    std::string getName() const { return name; }
+    int getScore() const { return score; }
+
+private:
+    std::string name;
+    int score;
+};
+
+bool compareScores(const Student& a, const Student& b) {
+    return a.getScore() > b.getScore();
+}
+
+int main() {
+    std::vector<Student> students = {
+        Student("Alice", 85),
+        Student("Bob", 92),
+        Student("Charlie", 78),
+        Student("Diana", 95)
+    };
+
+    std::sort(students.begin(), students.end(), compareScores);
+
+    std::cout << "Students sorted by score:\n";
+    for (const auto& student : students) {
+        std::cout << student.getName() << ": " << student.getScore() << "\n";
+    }
+
+    return 0;
+}
